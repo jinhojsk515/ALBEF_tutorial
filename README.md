@@ -2,7 +2,7 @@
 ALBEF tutorial, with MIMIC-CXR data
 
 ## Data preparation
-You need to prepare jsonl file(contains labels, etc.) and images. 
+Data are not included in this repository. You need to prepare jsonl file(contains labels, etc.) and images. 
 
 jsonl file: Visit https://github.com/SuperSupermoon/MedViLL, and from their `/data/mimic`, take `Train.jsonl, Valid.jsonl, Test.jsonl` and move them into your depository's `./data/MIMIC_CXR/`.
 
