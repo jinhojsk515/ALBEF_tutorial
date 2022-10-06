@@ -9,7 +9,7 @@ jsonl file: Visit https://github.com/SuperSupermoon/MedViLL, and from their `/da
 images: Visit https://github.com/SuperSupermoon/MedViLL, and from their README.md, download MIMIC-CXR datasets to get `mimic_dset.tar.gz`. Move this into your depository and unzip it. This will create `./re_512_3ch/` folder with photos.
 
 ## Code running
-Arguments can be passed with commands, or added manually in the code. Default values are already enough to run, but you must check the arguments and hyperparameters in the code. You can read the codes and comments in `pretrain_albef.py` to understand how ALBEF works.
+Arguments can be passed with commands, or added manually in the code. Default values are already enough to run, but you must check the arguments and hyperparameters in the code. You can read the code in `pretrain_albef.py` to understand how ALBEF works.
 
 -Pretrain
 
