@@ -1,6 +1,7 @@
 # ALBEF_tutorial
 ALBEF tutorial, with MIMIC-CXR data.
-!! retrieval.py is not verified right now. It will be fixed soon.
+
+!! retrieval.py is not verified right now. It will be fixed soon. !!
 
 
 ## Data preparation
