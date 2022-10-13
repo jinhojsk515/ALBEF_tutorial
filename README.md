@@ -1,5 +1,7 @@
 # ALBEF_tutorial
 ALBEF tutorial, with MIMIC-CXR data.
+!! retrieval.py is not verified right now. It will be fixed soon.
+
 
 ## Data preparation
 Data are not included in this repository. You need to prepare jsonl file(contains labels, etc.) and images. 
