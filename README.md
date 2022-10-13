@@ -1,5 +1,5 @@
 # ALBEF_tutorial
-ALBEF tutorial, with MIMIC-CXR data
+ALBEF tutorial, with MIMIC-CXR data.
 
 ## Data preparation
 Data are not included in this repository. You need to prepare jsonl file(contains labels, etc.) and images. 
@@ -21,4 +21,10 @@ python train.py
 
 ```
 python classification.py
+```
+
+-Retrieval [*pre-trained ALBEF would already work well for retrieval of its pre-train data, so no additional training.]
+
+```
+python retrieval.py
 ```
