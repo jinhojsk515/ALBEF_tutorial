@@ -22,7 +22,7 @@ import torch.nn.functional as F
 
 # ALBEF's strategy for retrieval task(ex: Image->Text)
 # When an input image is given, the model choose 'k-test' number of texts for that image,
-# according to their cosine similarity of their contrastive-loss embedding vectors.
+# according to their cosine similarity of their contrastive-loss embedding vectors.(this removes a lot of irrelavant images)
 # Then, the model takes those 'k-test' texts and the input image to perform ITM.
 # 'k-test' texts are ranked according to their ITM probability of "matched", and become the retrieval output.
 
@@ -266,7 +266,6 @@ def main(args, config):
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('--output_dir', default='./output/Retrieval')
-    #parser.add_argument('--checkpoint', default='./output/Retrieval/checkpoint_best_0.pth')
     #parser.add_argument('--checkpoint', default='')
     parser.add_argument('--checkpoint', default='./Pretrain/checkpoint_15.pth')
     parser.add_argument('--text_encoder', default='bert-base-uncased')
@@ -287,13 +286,10 @@ if __name__ == '__main__':
         'vision_width': 768,
         'embed_dim': 256,
         'temp': 0.07,
-        'k_test': 32,   #128
+        'k_test': 32,
         'distill':True,
         'warm_up':True,
         'bert_config': './config_bert.json',
-        'schedular': {'sched': 'cosine', 'lr': 5e-5, 'epochs': 10, 'min_lr': 1e-6,
-                      'decay_rate': 1, 'warmup_lr': 1e-5, 'warmup_epochs': 1, 'cooldown_epochs': 0},
-        'optimizer': {'opt': 'adamW', 'lr': 5e-5, 'weight_decay': 0.02}
     }
 
     Path(args.output_dir).mkdir(parents=True, exist_ok=True)
