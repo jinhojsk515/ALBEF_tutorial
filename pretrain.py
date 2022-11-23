@@ -85,7 +85,7 @@ def main(args,config):
         normalize,
     ])
     print("Creating dataset")
-    dataset = MIMIC_CXRDataset("./data/MIMIC_CXR/Train.jsonl",transform=pretrain_transform,data_length=100)
+    dataset = MIMIC_CXRDataset("./data/MIMIC_CXR/Train.jsonl",transform=pretrain_transform)
     if args.distributed:
         num_tasks = utils.get_world_size()
         global_rank = utils.get_rank()
