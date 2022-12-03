@@ -101,6 +101,7 @@ def main(args,config):
     print("Creating model")
     model = ALBEF(config=config, text_encoder_name=args.text_encoder, tokenizer=tokenizer, init_vit=True)
     model = model.to(device)
+    print('#parameters:',sum(p.numel() for p in model.parameters() if p.requires_grad))
 
     arg_opt = config['optimizer']
     optimizer=optim.AdamW(model.parameters(),lr=arg_opt['lr'],weight_decay=arg_opt['weight_decay'])
