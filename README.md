@@ -7,7 +7,7 @@ ALBEF tutorial, with MIMIC-CXR data.
 ## Data preparation
 Data are not included in this repository. You need to prepare jsonl file(contains labels, etc.) and images. 
 
-jsonl file: Visit https://github.com/SuperSupermoon/MedViLL, and from their `/data/mimic`, take `Train.jsonl, Valid.jsonl, Test.jsonl` and move them into your depository's `./data/MIMIC_CXR/`.
+jsonl file: Visit https://github.com/SuperSupermoon/MedViLL, and from their `/data/mimic`, take `Train.jsonl, Valid.jsonl, Test.jsonl` and move them into your depository's `./data/MIMIC_CXR/`. This jsonl file contains the image name(as a path), english prescription, and diagnosis labels.
 
 images: Visit https://github.com/SuperSupermoon/MedViLL, and from their README.md, download MIMIC-CXR datasets to get `mimic_dset.tar.gz`. Move this into your depository and unzip it. This will create `./re_512_3ch/` folder with photos.
 
