@@ -1,8 +1,6 @@
 # ALBEF_tutorial
 unofficial ALBEF tutorial, with MIMIC-CXR data.
 
-!! retrieval.py is not verified right now. It will be fixed soon. !!
-
 ## Model description
 The following image from the ALBEF paper(https://arxiv.org/abs/2107.07651) illustrates the overall model architecture and training objectives of ALBEF. You can find more description of the detailed code in the comments in `pretrain_albef.py`.
 ![image](https://user-images.githubusercontent.com/59189526/210308191-059ace87-e4d0-4ee5-b743-68fb49c0a271.png)
@@ -36,5 +34,5 @@ python classification.py
 -Retrieval [*pre-trained ALBEF would already work well for retrieval of its pre-train data, so no additional training.]
 
 ```
-python retrieval.py
+python retrieval.py --checkpoint ./save/file/path
 ```
