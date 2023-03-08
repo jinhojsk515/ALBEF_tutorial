@@ -1,5 +1,5 @@
 # ALBEF_tutorial
-ALBEF tutorial, with MIMIC-CXR data.
+unofficial ALBEF tutorial, with MIMIC-CXR data.
 
 !! retrieval.py is not verified right now. It will be fixed soon. !!
 
@@ -15,6 +15,8 @@ Data are not included in this repository. You need to prepare jsonl file(contain
 jsonl file: Visit https://github.com/SuperSupermoon/MedViLL, and from their `/data/mimic`, take `Train.jsonl, Valid.jsonl, Test.jsonl` and move them into your depository's `./data/MIMIC_CXR/`. This jsonl file contains the image name(as a path), english prescription, and diagnosis labels.
 
 images: Visit https://github.com/SuperSupermoon/MedViLL, and from their README.md, download MIMIC-CXR datasets to get `mimic_dset.tar.gz`. Move this into your depository and unzip it. This will create `./re_512_3ch/` folder with photos.
+
+> ※The image download link above is now blocked, since redistributing the MIMIC-CXR data is forbidden. Please visit their website https://physionet.org/content/mimic-cxr/2.0.0/ and follow the official method to access the data.
 
 ## Code running
 Arguments can be passed with commands, or edited manually in the running code. Default values are already good to go, but I recommend you to check the arguments and hyperparameters in the code. You can read the code in `pretrain_albef.py` to understand how ALBEF works.
