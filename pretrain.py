@@ -38,7 +38,7 @@ def train(model, data_loader, optimizer, tokenizer, epoch, warmup_steps, device,
     for i, (image, text, _) in enumerate(tqdm_data_loader):
         optimizer.zero_grad()
         image = image.to(device, non_blocking=True)
-        text_input = tokenizer(text, padding='longest', truncation=True, max_length=150, return_tensors="pt").to(device)
+        text_input = tokenizer(text, padding='longest', truncation=True, max_length=250, return_tensors="pt").to(device)
 
         if epoch > 0:
             alpha = config['alpha']
