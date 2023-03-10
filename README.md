@@ -28,7 +28,7 @@ python train.py
 -Downstream task: multi-label classification
 
 ```
-python classification.py
+python classification.py --checkpoint ./save/file/path
 ```
 
 -Retrieval [*pre-trained ALBEF would already work well for retrieval of its pre-train data, so no additional training.]
